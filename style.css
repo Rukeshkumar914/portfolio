@@ -291,16 +291,6 @@ section h2 {
   color: white;
 }
 
-/* CURRENTLY LEARNING */
-
-.learning {
-  text-align: center;
-}
-
-.learning .skill-container span {
-  border-color: #563aa3;
-}
-
 /* CONNECT */
 
 .connect {
