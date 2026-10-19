@@ -5,173 +5,348 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#050914">
-  <meta name="description" content="Rukesh Kumar's DevOps portfolio featuring Linux, Docker, Kubernetes, AWS and CI/CD projects.">
+
+  <meta name="description"
+        content="Rukesh Kumar's DevOps portfolio featuring Linux, Docker, Kubernetes, AWS and CI/CD projects.">
+
   <title>Rukesh Kumar | DevOps Portfolio</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- NAVBAR: YAHAN ADD KARO -->
-<nav class="navbar">
-  <a href="#home" class="logo">RK<span>.</span></a>
+  <!-- BACKGROUND LIGHT EFFECTS -->
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
 
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#blog">Blog</a>
-    <a href="resume.pdf" class="resume-btn" download>
-      ↓ Download Resume
-    </a>
-  </div>
-</nav>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#home" class="logo">RK<span>.</span></a>
 
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Toolkit</a>
+      <a href="#connect">Contact</a>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
+      <a href="resume.pdf" class="resume-btn" download>
+        <span>↓</span> Download Resume
+      </a>
+    </div>
+  </nav>
 
-      <img src="portfolio.jpg" class="profile-img"
-           alt="Rukesh Kumar profile photo">
+  <main>
 
-      <p class="comment">// Building, automating, deploying.</p>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
 
-      <h1>Rukesh Kumar</h1>
+      <div class="hero-content">
 
-      <h2>DevOps Engineer | Cloud & Automation Learner</h2>
+        <div class="status">
+          <span class="status-dot"></span>
+          Open to DevOps Opportunities
+        </div>
 
-      <p class="description">
-        Passionate about Linux, Docker, Kubernetes and cloud infrastructure.<br>
-        Building automated CI/CD pipelines using GitHub Actions and AWS.<br>
-        Learning to deploy, monitor and scale real-world applications.
+        <div class="profile-wrapper">
+          <div class="profile-glow"></div>
+
+          <img
+            src="portfolio.jpg"
+            class="profile-img"
+            alt="Rukesh Kumar profile photo"
+          >
+        </div>
+
+        <p class="comment">// Building. Automating. Deploying.</p>
+
+        <h1>Hi, I'm <span>Rukesh Kumar</span></h1>
+
+        <h2>DevOps Engineer <span>|</span> Cloud & Automation Learner</h2>
+
+        <p class="description">
+          Passionate about Linux, Docker, Kubernetes and cloud infrastructure.
+          <br>
+          Building CI/CD pipelines and automating deployments with AWS.
+          <br>
+          Turning infrastructure challenges into reliable solutions.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="primary-btn">
+            View My Projects <span>→</span>
+          </a>
+
+          <a href="#connect" class="secondary-btn">
+            Connect With Me
+          </a>
+        </div>
+
+        <div class="social-icons">
+          <a
+            href="https://github.com/Rukeshkumar914"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >G</a>
+
+          <a
+            href="https://linkedin.com/in/rukesh-yadav-6ab99a234"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >in</a>
+
+          <a href="mailto:yrukesh787@gmail.com" aria-label="Email">@</a>
+        </div>
+
+      </div>
+
+      <a href="#skills" class="scroll-indicator">
+        <span></span>
+        Scroll to explore
+      </a>
+
+    </section>
+
+    <!-- TOOLKIT -->
+    <section class="skills section" id="skills">
+
+      <p class="section-label">WHAT I WORK WITH</p>
+
+      <h2 class="section-title">
+        My <span>Toolkit</span>
+      </h2>
+
+      <p class="section-description">
+        Technologies and tools I'm learning and using in hands-on projects.
       </p>
 
-      <div class="hero-buttons">
-        <a href="#projects" class="primary-btn">View My Projects →</a>
-        <a href="#connect" class="secondary-btn">Connect With Me</a>
+      <div class="skill-container">
+
+        <span class="skill skill-blue">Linux</span>
+        <span class="skill skill-purple">Bash Scripting</span>
+        <span class="skill skill-cyan">Git</span>
+        <span class="skill skill-purple">GitHub</span>
+        <span class="skill skill-blue">Docker</span>
+        <span class="skill skill-cyan">Docker Compose</span>
+        <span class="skill skill-purple">Kubernetes</span>
+        <span class="skill skill-blue">AWS</span>
+        <span class="skill skill-cyan">GitHub Actions</span>
+        <span class="skill skill-purple">Networking</span>
+        <span class="skill skill-blue">Python</span>
+        <span class="skill skill-cyan">PostgreSQL</span>
+
       </div>
 
-      <div class="social-icons">
-        <a href="https://github.com/Rukeshkumar914"
-           target="_blank" rel="noopener noreferrer"
-           aria-label="GitHub">G</a>
+    </section>
 
-        <a href="https://linkedin.com/in/rukesh-yadav-6ab99a234"
-           target="_blank" rel="noopener noreferrer"
-           aria-label="LinkedIn">in</a>
+    <!-- PROJECTS -->
+    <section class="projects section" id="projects">
 
-        <a href="mailto:yrukesh787@gmail.com"
-           aria-label="Email">@</a>
+      <p class="section-label">MY WORK</p>
+
+      <h2 class="section-title">
+        Featured <span>DevOps Projects</span>
+      </h2>
+
+      <p class="section-description">
+        Practical projects focused on containers, orchestration and automation.
+      </p>
+
+      <div class="project-container">
+
+        <!-- PROJECT 1 -->
+        <article class="project-card">
+
+          <div class="project-top">
+            <div class="project-icon">01</div>
+            <span class="project-type">CONTAINERS</span>
+          </div>
+
+          <h3>Containerized Django App</h3>
+
+          <p>
+            Containerize a Django application using Docker and Docker Compose,
+            configure environment variables and connect the application to a database.
+          </p>
+
+          <div class="project-tags">
+            <span>Python</span>
+            <span>Django</span>
+            <span>Docker</span>
+            <span>MySQL</span>
+          </div>
+
+          <a
+            href="https://github.com/Rukeshkumar914"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            View on GitHub <span>↗</span>
+          </a>
+
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="project-card">
+
+          <div class="project-top">
+            <div class="project-icon purple-icon">02</div>
+            <span class="project-type">ORCHESTRATION</span>
+          </div>
+
+          <h3>Kubernetes Deployment</h3>
+
+          <p>
+            Deploy containerized applications using Deployments, Services,
+            Namespaces, ConfigMaps, Secrets and persistent storage.
+          </p>
+
+          <div class="project-tags">
+            <span>Kubernetes</span>
+            <span>YAML</span>
+            <span>Docker</span>
+            <span>Linux</span>
+          </div>
+
+          <a
+            href="https://github.com/Rukeshkumar914"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            View on GitHub <span>↗</span>
+          </a>
+
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="project-card">
+
+          <div class="project-top">
+            <div class="project-icon cyan-icon">03</div>
+            <span class="project-type">AUTOMATION</span>
+          </div>
+
+          <h3>CI/CD & Cloud Automation</h3>
+
+          <p>
+            Create a CI/CD workflow with GitHub Actions, automate application
+            builds and explore deployment on AWS EC2.
+          </p>
+
+          <div class="project-tags">
+            <span>GitHub Actions</span>
+            <span>AWS</span>
+            <span>Docker</span>
+            <span>Bash</span>
+          </div>
+
+          <a
+            href="https://github.com/Rukeshkumar914"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            View on GitHub <span>↗</span>
+          </a>
+
+        </article>
+
       </div>
 
-    </div>
-  </section>
+    </section>
 
-  
-  <section class="skills" id="skills">
-    <h2> Toolkit </h2>
+    <!-- CURRENTLY LEARNING -->
+    <section class="learning section">
 
-    <div class="skill-container">
-      <span>Linux</span>
-      <span>Bash Scripting</span>
-      <span>Git</span>
-      <span>GitHub</span>
-      <span>Docker</span>
-      <span>Docker Compose</span>
-      <span>Kubernetes</span>
-      <span>AWS</span>
-      <span>GitHub Actions</span>
-      <span>Networking</span>
-      <span>Python</span>
-      <span>PostgreSQL</span>
-    </div>
-  </section>
+      <p class="section-label">MY JOURNEY</p>
 
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
-    <h2>Featured DevOps Projects</h2>
+      <h2 class="section-title">
+        Currently <span>Learning</span>
+      </h2>
 
-    <div class="project-container">
+      <div class="learning-container">
 
-      <article class="project-card">
-        <h3>01. Containerized Django App</h3>
-        <p>
-          Containerize a Django application using Docker and Docker Compose,
-          with database connectivity and environment-based configuration.
-        </p>
-        <div class="skill-container">
-          <span>Python</span>
-          <span>Django</span>
-          <span>Docker</span>
-          <span>MySQL</span>
+        <div class="learning-card">
+          <span class="learning-number">01</span>
+          <div>
+            <h3>Kubernetes</h3>
+            <p>Workloads, networking, storage and cluster management.</p>
+          </div>
         </div>
-        <a href="https://github.com/Rukeshkumar914"
-           target="_blank" rel="noopener noreferrer">
-          View on GitHub →
-        </a>
-      </article>
 
-      <article class="project-card">
-        <h3>02. Kubernetes Deployment</h3>
-        <p>
-          Deploy applications using Kubernetes Deployments, Services,
-          Namespaces, ConfigMaps, Secrets and persistent storage.
-        </p>
-        <div class="skill-container">
-          <span>Kubernetes</span>
-          <span>YAML</span>
-          <span>Docker</span>
-          <span>Linux</span>
+        <div class="learning-card">
+          <span class="learning-number">02</span>
+          <div>
+            <h3>CI/CD Pipelines</h3>
+            <p>Automated testing, builds and application deployments.</p>
+          </div>
         </div>
-        <a href="https://github.com/Rukeshkumar914"
-           target="_blank" rel="noopener noreferrer">
-          View on GitHub →
-        </a>
-      </article>
 
-      <article class="project-card">
-        <h3>03. CI/CD & Cloud Automation</h3>
-        <p>
-          Build a CI/CD workflow with GitHub Actions, automate
-          application builds and explore deployment on AWS EC2.
-        </p>
-        <div class="skill-container">
-          <span>GitHub Actions</span>
-          <span>AWS</span>
-          <span>Docker</span>
-          <span>Bash</span>
+        <div class="learning-card">
+          <span class="learning-number">03</span>
+          <div>
+            <h3>AWS Cloud</h3>
+            <p>Cloud infrastructure, EC2, IAM and deployment workflows.</p>
+          </div>
         </div>
-        <a href="https://github.com/Rukeshkumar914"
-           target="_blank" rel="noopener noreferrer">
-          View on GitHub →
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="connect section" id="connect">
+
+      <p class="section-label">LET'S CONNECT</p>
+
+      <h2 class="section-title">
+        Let's Build Something <span>Great</span>
+      </h2>
+
+      <p class="section-description">
+        Have an opportunity, project idea or DevOps discussion?
+        Feel free to reach out.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          href="https://github.com/Rukeshkumar914"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-btn"
+        >GitHub ↗</a>
+
+        <a
+          href="https://linkedin.com/in/rukesh-yadav-6ab99a234"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-btn"
+        >LinkedIn ↗</a>
+
+        <a href="mailto:yrukesh787@gmail.com" class="contact-btn">
+          Email Me ↗
         </a>
-      </article>
 
-    </div>
-  </section>
+        <a href="tel:+919142261069" class="contact-btn">
+          Call Me ↗
+        </a>
 
-  <!-- CONNECT -->
-  <section class="connect" id="connect">
-    <h2>Connect With Me</h2>
+      </div>
 
-    <div class="buttons">
-      <a href="https://github.com/Rukeshkumar914"
-         target="_blank" rel="noopener noreferrer">
-        GitHub
-      </a>
+    </section>
 
-      <a href="https://linkedin.com/in/rukesh-kumar-6ab99a234"
-         target="_blank" rel="noopener noreferrer">
-        LinkedIn
-      </a>
+  </main>
 
-      <a href="mailto:yrukesh787@gmail.com">Email</a>
-
-      <a href="tel:+919142261069">Call</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>Rukesh Kumar · DevOps Portfolio</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a href="#home" class="footer-logo">RK<span>.</span></a>
+    <p>Designed & built by Rukesh Kumar</p>
+    <p class="copyright">© 2026 · DevOps Portfolio</p>
   </footer>
 
 </body>
