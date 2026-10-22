@@ -1,4 +1,8 @@
 
+/* ========================================
+   1. ROOT & RESET
+======================================== */
+
 :root {
   --bg: #0b1120;
   --surface: #111c30;
@@ -37,9 +41,9 @@ a {
   margin: 0 auto;
 }
 
-/* =========================
-   HEADER & NAVIGATION
-========================= */
+/* ========================================
+   2. HEADER & NAVIGATION
+======================================== */
 
 .header {
   position: sticky;
@@ -80,41 +84,54 @@ a {
 .nav-links a {
   color: var(--muted);
   font-size: 0.9rem;
+  font-weight: 400;
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover,
-.nav-links a:focus-visible {
+.nav-links a:hover {
   color: var(--accent);
 }
 
-/* Resume link: same appearance as navigation links */
-.navbar .nav-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+/* Resume link: plain text like other navigation links */
+.navbar a.nav-button,
+.navbar a.resume-link,
+.navbar a.button.primary,
+.navbar a.primary {
+  display: inline;
   padding: 0;
+  margin: 0;
   border: none;
   border-radius: 0;
+  outline: none;
   background: transparent;
-  color: var(--muted);
+  background-color: transparent;
   box-shadow: none;
-  font: inherit;
+  color: var(--muted);
+  font-family: inherit;
   font-size: 0.9rem;
   font-weight: 400;
+  line-height: inherit;
+  text-decoration: none;
   white-space: nowrap;
+  transform: none;
   transition: color 0.2s ease;
 }
 
-.navbar .nav-button:hover,
-.navbar .nav-button:focus-visible {
+.navbar a.nav-button:hover,
+.navbar a.resume-link:hover,
+.navbar a.button.primary:hover,
+.navbar a.primary:hover {
   background: transparent;
+  background-color: transparent;
   color: var(--accent);
+  border: none;
+  box-shadow: none;
+  transform: none;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+/* ========================================
+   3. HERO SECTION
+======================================== */
 
 .hero {
   min-height: 600px;
@@ -122,32 +139,31 @@ a {
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   gap: 50px;
-  padding-top: 75px;
-  padding-bottom: 75px;
+  padding: 75px 0;
 }
 
 .eyebrow {
+  margin-bottom: 18px;
   color: var(--accent);
   font-size: 0.77rem;
   font-weight: 750;
   letter-spacing: 2px;
-  margin-bottom: 18px;
 }
 
 .status-dot {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background: #4ade80;
-  border-radius: 50%;
   margin-right: 8px;
+  border-radius: 50%;
+  background: #4ade80;
 }
 
 .hero h1 {
+  margin-bottom: 24px;
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   line-height: 1.13;
   letter-spacing: -1.8px;
-  margin-bottom: 24px;
 }
 
 .hero-description {
@@ -165,8 +181,8 @@ a {
 
 .button {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 12px 18px;
   border: 1px solid var(--border);
   border-radius: 7px;
@@ -210,9 +226,9 @@ a {
   font-size: 0.78rem;
 }
 
-/* =========================
-   TERMINAL
-========================= */
+/* ========================================
+   4. TERMINAL
+======================================== */
 
 .terminal {
   overflow: hidden;
@@ -227,8 +243,8 @@ a {
   align-items: center;
   gap: 13px;
   padding: 13px 17px;
-  background: #131e31;
   border-bottom: 1px solid var(--border);
+  background: #131e31;
   color: var(--muted);
   font-size: 0.78rem;
 }
@@ -241,8 +257,8 @@ a {
 .terminal-dots span {
   width: 9px;
   height: 9px;
-  background: #64748b;
   border-radius: 50%;
+  background: #64748b;
 }
 
 .terminal-dots span:first-child {
@@ -282,13 +298,12 @@ a {
   color: var(--accent);
 }
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
+/* ========================================
+   5. GENERAL SECTIONS
+======================================== */
 
 .section {
-  padding-top: 75px;
-  padding-bottom: 75px;
+  padding: 75px 0;
 }
 
 .section-heading {
@@ -309,16 +324,16 @@ a {
   font-size: 0.9rem;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ========================================
+   6. ABOUT
+======================================== */
 
 .about-card {
   max-width: 850px;
   padding: 30px;
-  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
+  background: var(--surface);
   color: var(--muted);
 }
 
@@ -326,9 +341,9 @@ a {
   margin-top: 16px;
 }
 
-/* =========================
-   SKILLS
-========================= */
+/* ========================================
+   7. SKILLS
+======================================== */
 
 .skills-grid,
 .projects-grid {
@@ -341,9 +356,9 @@ a {
 .project-card {
   min-width: 0;
   padding: 24px;
-  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 11px;
+  background: var(--surface);
   transition:
     border-color 0.2s ease,
     transform 0.2s ease;
@@ -375,9 +390,9 @@ a {
   font-size: 0.9rem;
 }
 
-/* =========================
-   PROJECTS
-========================= */
+/* ========================================
+   8. PROJECTS
+======================================== */
 
 .project-top {
   display: flex;
@@ -434,9 +449,9 @@ a {
   font-size: 0.8rem;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* ========================================
+   9. CONTACT
+======================================== */
 
 .contact-card {
   padding: 45px;
@@ -452,9 +467,9 @@ a {
   margin-top: 16px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ========================================
+   10. FOOTER
+======================================== */
 
 .footer {
   border-top: 1px solid var(--border);
@@ -473,20 +488,20 @@ a {
   font-size: 0.78rem;
 }
 
-/* =========================
-   TABLET RESPONSIVE
-========================= */
+/* ========================================
+   11. TABLET RESPONSIVE
+======================================== */
 
 @media (max-width: 850px) {
   .hero {
+    min-height: auto;
     grid-template-columns: 1fr;
     gap: 38px;
-    min-height: auto;
   }
 
   .terminal {
-    max-width: 600px;
     width: 100%;
+    max-width: 600px;
   }
 
   .skills-grid,
@@ -495,17 +510,16 @@ a {
   }
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+/* ========================================
+   12. MOBILE RESPONSIVE
+======================================== */
 
 @media (max-width: 600px) {
   .navbar {
     min-height: 70px;
     flex-wrap: wrap;
-    padding-top: 12px;
-    padding-bottom: 12px;
     gap: 14px;
+    padding: 12px 0;
   }
 
   .nav-links {
@@ -519,13 +533,15 @@ a {
     font-size: 0.8rem;
   }
 
-  .navbar .nav-button {
+  .navbar a.nav-button,
+  .navbar a.resume-link,
+  .navbar a.button.primary,
+  .navbar a.primary {
     font-size: 0.8rem;
   }
 
   .hero {
-    padding-top: 55px;
-    padding-bottom: 45px;
+    padding: 55px 0 45px;
   }
 
   .hero h1 {
@@ -538,8 +554,7 @@ a {
   }
 
   .section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0;
   }
 
   .skills-grid,
@@ -558,16 +573,15 @@ a {
   }
 
   .footer-content {
-    padding-top: 22px;
-    padding-bottom: 22px;
     flex-direction: column;
     align-items: flex-start;
+    padding: 22px 0;
   }
 }
 
-/* =========================
-   ACCESSIBILITY
-========================= */
+/* ========================================
+   13. ACCESSIBILITY
+======================================== */
 
 a:focus-visible {
   outline: 2px solid var(--accent);
