@@ -4,21 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rukesh Yadav's DevOps Engineer and Python Developer portfolio.">
-  <title>Rukesh Yadav | DevOps Portfolio</title>
+  <meta name="description" content="Rukesh Kumar's DevOps Engineer and Python Developer portfolio.">
+  <title>Rukesh Kumar | DevOps Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="header">
     <nav class="navbar container">
-      <a href="#home" class="logo">RUKESH<span>.</span></a>
-
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+
+        <a class="button primary"
+           href="assets/resume.pdf"
+           download="Rukesh-Kumar-Resume.pdf">
+          Download Resume ↓
+        </a>
       </div>
 
       <a class="nav-button" href="#projects">Explore Work ↗</a>
@@ -30,24 +34,29 @@
       <div class="hero-content">
         <p class="eyebrow">
           <span class="status-dot"></span>
-          DEVOPS ENGINEER IN TRAINING
+          DEVOPS ENGINEER
         </p>
 
-        <h1>Building reliable systems.<br>
+        <h1>
+          Building reliable systems.<br>
           <span>Automating everything.</span>
         </h1>
 
         <p class="hero-description">
-          Hi, I'm Rukesh Yadav. I work with Python, Linux, Docker
-          and Kubernetes to build, automate and deploy applications.
+          Hi, I'm Rukesh Kumar. I work with Python, Linux, Docker
+          and K8s to build, automate and deploy applications.
           I'm continuously developing my skills in cloud and DevOps.
         </p>
 
         <div class="hero-buttons">
-          <a class="button primary" href="#projects">View My Projects ↗</a>
+          <a class="button primary" href="#projects">
+            View My Projects ↗
+          </a>
+
           <a class="button secondary"
-             href="https://github.com/Rukeshkumar914"
-             target="_blank" rel="noopener noreferrer">
+             href="https://github.com/Rukeshkumar914/cloudforge"
+             target="_blank"
+             rel="noopener noreferrer">
             GitHub Profile
           </a>
         </div>
@@ -62,14 +71,16 @@
       <div class="terminal">
         <div class="terminal-header">
           <div class="terminal-dots">
-            <span></span><span></span><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <span>rukesh@devops:~</span>
+          <span>:~</span>
         </div>
 
         <div class="terminal-body">
           <p><span class="green">$</span> whoami</p>
-          <p class="output">Rukesh Yadav</p>
+          <p class="output">Rukesh Kumar</p>
 
           <p><span class="green">$</span> cat skills.txt</p>
           <p class="output">Linux · Python · Docker</p>
@@ -92,15 +103,10 @@
 
       <div class="about-card">
         <p>
-          I'm a third-year college student focused on DevOps engineering
-          and Python backend development. I enjoy working with Linux,
-          writing automation scripts, building Docker images and learning
-          how applications run in Kubernetes environments.
-        </p>
-        <p>
-          My goal is to develop practical, well-documented projects and
-          strengthen my skills in cloud infrastructure, CI/CD and
-          production troubleshooting.
+          I'm focused on building, automating, and deploying reliable
+          applications using Python, Linux, Docker, Kubernetes, and cloud
+          technologies. I enjoy solving technical problems and developing
+          practical DevOps projects.
         </p>
       </div>
     </section>
@@ -122,12 +128,6 @@
           <span class="skill-icon">◇</span>
           <h3>Containers</h3>
           <p>Docker, Docker Compose, container images and networking</p>
-        </article>
-
-        <article class="skill-card">
-          <span class="skill-icon">☸</span>
-          <h3>Orchestration</h3>
-          <p>Kubernetes, Pods, Deployments, Services, StatefulSets</p>
         </article>
 
         <article class="skill-card">
@@ -164,92 +164,112 @@
 
         <article class="project-card">
           <div class="project-top">
-            <span class="project-number">PROJECT 01</span>
+            <span class="project-number">PROJECT 01 · IN PROGRESS</span>
             <span class="project-symbol">⌘</span>
           </div>
           <h3>CloudForge</h3>
           <p>
-            A Python CLI project with a health-check module that reports
-            system information and JSON output, with automated tests using
-            pytest.
+            A Python-based CLI project for system health checks,
+            system information, JSON output and automated testing
+            using pytest.
           </p>
           <div class="tags">
-            <span>Python</span><span>CLI</span><span>pytest</span><span>JSON</span>
+            <span>Python</span>
+            <span>CLI</span>
+            <span>JSON</span>
+            <span>pytest</span>
           </div>
           <a class="project-link"
-             href="https://github.com/Rukeshkumar914"
-             target="_blank" rel="noopener noreferrer">
-            View on GitHub ↗
+             href="https://github.com/Rukeshkumar914/cloudforge"
+             target="_blank"
+             rel="noopener noreferrer">
+            View GitHub Profile ↗
           </a>
         </article>
 
         <article class="project-card">
           <div class="project-top">
-            <span class="project-number">PROJECT 02</span>
-            <span class="project-symbol">◇</span>
+            <span class="project-number">PROJECT 02 · PLANNED</span>
+            <span class="project-symbol">↗</span>
           </div>
-          <h3>Django Notes App</h3>
+          <h3>DeployX</h3>
           <p>
-            A notes application using Django and MySQL, packaged with
-            Docker and Docker Compose, with Kubernetes manifests for
-            deployment practice.
+            An automated deployment platform featuring a Python REST API,
+            Docker, GitHub Actions CI/CD, automated testing and
+            rollback on deployment failure.
           </p>
           <div class="tags">
-            <span>Django</span><span>MySQL</span><span>Docker</span><span>Kubernetes</span>
+            <span>Python</span>
+            <span>Docker</span>
+            <span>GitHub Actions</span>
+            <span>CI/CD</span>
           </div>
-          <a class="project-link"
-             href="https://github.com/Rukeshkumar914/Django-notes-app-Docker-"
-             target="_blank" rel="noopener noreferrer">
-            View Repository ↗
-          </a>
+          <span class="project-link">Coming Soon</span>
         </article>
 
         <article class="project-card">
           <div class="project-top">
-            <span class="project-number">PROJECT 03</span>
-            <span class="project-symbol">☸</span>
+            <span class="project-number">PROJECT 03 · PLANNED</span>
+            <span class="project-symbol">⚙</span>
           </div>
-          <h3>Kubernetes Lab</h3>
+          <h3>InfraPilot</h3>
           <p>
-            Hands-on Kubernetes practice with a local Kind cluster,
-            application Deployments, Services, persistent storage and
-            troubleshooting container failures.
+            An infrastructure automation system for Linux configuration,
+            Bash and Python scripting, network diagnostics, PostgreSQL
+            backups and recovery automation.
           </p>
           <div class="tags">
-            <span>Kubernetes</span><span>Kind</span><span>YAML</span><span>Docker</span>
+            <span>Linux</span>
+            <span>Bash</span>
+            <span>Python</span>
+            <span>PostgreSQL</span>
           </div>
-          <a class="project-link"
-             href="https://github.com/Rukeshkumar914"
-             target="_blank" rel="noopener noreferrer">
-            Explore Repositories ↗
-          </a>
+          <span class="project-link">Coming Soon</span>
         </article>
 
         <article class="project-card">
           <div class="project-top">
-            <span class="project-number">PROJECT 04</span>
+            <span class="project-number">PROJECT 04 · PLANNED</span>
+            <span class="project-symbol">◉</span>
+          </div>
+          <h3>OpsPilot</h3>
+          <p>
+            A server operations and reliability platform with CPU,
+            memory, disk and service health checks, log analysis,
+            threshold-based alerts and incident reports.
+          </p>
+          <div class="tags">
+            <span>Python</span>
+            <span>Linux</span>
+            <span>Monitoring</span>
+            <span>Automation</span>
+          </div>
+          <span class="project-link">Coming Soon</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">PROJECT 05 · FUTURE CAPSTONE</span>
             <span class="project-symbol">☁</span>
           </div>
-          <h3>Flask App on AWS ECS</h3>
+          <h3>NimbusOps</h3>
           <p>
-            A container deployment project focused on building a Flask
-            application image and learning AWS ECS deployment workflows.
+            An end-to-end DevOps platform combining a Python backend,
+            PostgreSQL, Linux and networking diagnostics, Docker deployment,
+            GitHub Actions CI/CD, automated backups, health checks
+            and deployment history.
           </p>
           <div class="tags">
-            <span>Flask</span><span>Docker</span><span>AWS ECS</span>
+            <span>Python</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+            <span>CI/CD</span>
+            <span>AWS</span>
           </div>
-          <a class="project-link"
-             href="https://github.com/Rukeshkumar914/flask-app-ecs"
-             target="_blank" rel="noopener noreferrer">
-            View Repository ↗
-          </a>
+          <span class="project-link">Coming Soon</span>
         </article>
 
       </div>
-      <p class="project-note">
-        Note: Describe each project's actual completion status accurately.
-        Add a live demo only after deploying and verifying it.
-      </p>
     </section>
 
     <section class="section container" id="contact">
@@ -260,14 +280,17 @@
           I'm interested in DevOps opportunities, internships and
           collaborating on practical technical projects.
         </p>
+
         <div class="hero-buttons">
           <a class="button primary"
              href="https://github.com/Rukeshkumar914"
-             target="_blank" rel="noopener noreferrer">
+             target="_blank"
+             rel="noopener noreferrer">
             Connect on GitHub ↗
           </a>
+
           <a class="button secondary"
-             href="mailto:YOUR_EMAIL@example.com">
+             href="mailto:yrukesh787@gmail.com">
             Email Me
           </a>
         </div>
@@ -277,9 +300,8 @@
 
   <footer class="footer">
     <div class="container footer-content">
-      <a href="#home" class="logo">RUKESH<span>.</span></a>
       <p>Designed and built with HTML & CSS.</p>
-      <p>© 2026 Rukesh Yadav</p>
+      <p>© 2026 Rukesh Kumar</p>
     </div>
   </footer>
 
