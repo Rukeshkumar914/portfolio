@@ -1,424 +1,783 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0b1120">
-    <title>Rukesh Kumar | DevOps Engineer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rukesh Kumar's DevOps Engineer and Python Developer portfolio.">
+  <meta name="theme-color" content="#0b1120">
+
+  <title>Rukesh Kumar | DevOps Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <!-- NAVIGATION -->
+  <header class="header">
+    <nav class="navbar container">
 
-    <!-- Navbar -->
-    <header class="header">
-        <nav class="navbar container">
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#github">GitHub</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="resume-link" href="assets/resume.pdf" download>
+          Resume ↓
+        </a>
+      </div>
 
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
+      <a class="button primary nav-cta" href="#projects">
+        Explore Work ↗
+      </a>
+    </nav>
+  </header>
 
-            <a href="#contact" class="nav-button">Let's Connect ↗</a>
-        </nav>
-    </header>
+  <main>
+     <!-- ABOUT -->
+    <section class="section container" id="about">
+      <div class="section-heading">
+        <h2> Rukesh <span> Kumar </span></h2>
+      </div>
 
-    <main>
-
-        <!-- Hero -->
-         <div class="section-heading">
-                <h2> Rukesh <span> Kumar </span></h2>
-                <p>
-                    I'm building practical skills in infrastructure, automation
-                    and cloud technologies. My focus is learning by building,
-                    troubleshooting real problems and improving deployment workflows.
-                </p>
-            </div>
-
-                
-
-                <div class="hero-buttons">
-                    <a href="#projects" class="button button-primary">
-                        View My Projects ↗
-                    </a>
-
-                    <a
-                        href="https://github.com/Rukeshkumar914"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button button-secondary"
-                    >
-                        GitHub Profile ↗
-                    </a>
-                </div>
-
-                <div class="hero-meta">
-                    <span>📍 Punjab, India</span>
-                    <span>⌘ Linux Enthusiast</span>
-                    <span>☁ Cloud &amp; Automation</span>
-                </div>
-            </div>
-
-
-        <!-- About -->
-        <section class="section container" id="about">
-            <div class="section-heading">
-                <h2> Rukesh <span> Kumar </span></h2>
-                <p>
-                    I'm building practical skills in infrastructure, automation
-                    and cloud technologies. My focus is learning by building,
-                    troubleshooting real problems and improving deployment workflows.
-                </p>
-            </div>
-
-            <div class="about-grid">
-                <article class="info-card">
-                    <span class="card-symbol">⌘</span>
-                    <h3>Linux &amp; Systems</h3>
-                    <p>
-                        Working with Linux commands, networking, shell scripting
-                        and system troubleshooting.
-                    </p>
-                </article>
-
-                <article class="info-card">
-                    <span class="card-symbol">⚙</span>
-                    <h3>Automation</h3>
-                    <p>
-                        Practising Python, Bash, Docker and CI/CD workflows to
-                        reduce repetitive work.
-                    </p>
-                </article>
-
-                <article class="info-card">
-                    <span class="card-symbol">☁</span>
-                    <h3>Cloud &amp; DevOps</h3>
-                    <p>
-                        Learning AWS, Kubernetes and deployment practices through
-                        hands-on projects.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section class="section container" id="skills">
-            <p class="section-label">02 / TECHNICAL ARSENAL</p>
-
-            <div class="section-heading">
-                <h2>Tools I <span>work with.</span></h2>
-                <p>
-                    Technologies I use and practise while building my DevOps
-                    and backend development skills.
-                </p>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <span class="skill-icon">⌘</span>
-                    <span>Linux</span>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">⌨</span>
-                    <span>Bash Scripting</span>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">🐍</span>
-                    <span>Python</span>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">◈</span>
-                    <span>Git &amp; GitHub</span>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">▣</span>
-                    <span>Docker</span>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">⎈</span>
-                    <span>Kubernetes</span>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">☁</span>
-                    <span>AWS</span>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">⌁</span>
-                    <span>Networking</span>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">⇄</span>
-                    <span>CI/CD</span>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">▤</span>
-                    <span>PostgreSQL</span>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">♧</span>
-                    <span>Django</span>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">⌘</span>
-                    <span>GitHub Actions</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section class="section container" id="projects">
-            <p class="section-label">03 / SELECTED PROJECTS</p>
-
-            <div class="section-heading projects-heading">
-                <h2>Built to <span>solve problems.</span></h2>
-                <p>
-                    A collection of practical projects documenting my learning
-                    in development, infrastructure and DevOps.
-                </p>
-            </div>
-
-            <div class="projects-grid">
-
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-number">01</span>
-                        <span class="project-status completed">Completed</span>
-                    </div>
-
-                    <h3>CloudForge</h3>
-                    <p>
-                        A Python project with health-check functionality,
-                        environment information and automated tests.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Pytest</span>
-                        <span>Linux</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/Rukeshkumar914"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                    >
-                        View on GitHub ↗
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-number">02</span>
-                        <span class="project-status progress">In Progress</span>
-                    </div>
-
-                    <h3>DeployX</h3>
-                    <p>
-                        A containerised application deployment workflow using
-                        Docker and cloud deployment concepts.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Docker</span>
-                        <span>AWS</span>
-                        <span>CI/CD</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/Rukeshkumar914"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                    >
-                        View on GitHub ↗
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-number">03</span>
-                        <span class="project-status progress">In Progress</span>
-                    </div>
-
-                    <h3>InfraPilot</h3>
-                    <p>
-                        Hands-on practice with Kubernetes resources,
-                        deployments, services and cluster troubleshooting.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Kubernetes</span>
-                        <span>YAML</span>
-                        <span>Docker</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/Rukeshkumar914"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                    >
-                        View on GitHub ↗
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-number">04</span>
-                        <span class="project-status planned">Planned</span>
-                    </div>
-
-                    <h3>OpsPilot</h3>
-                    <p>
-                        A planned automation project focused on operational
-                        scripts, health checks and troubleshooting.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Bash</span>
-                        <span>Monitoring</span>
-                    </div>
-
-                    <span class="project-link">Coming soon</span>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-number">05</span>
-                        <span class="project-status planned">Planned</span>
-                    </div>
-
-                    <h3>NimbusOps</h3>
-                    <p>
-                        A future capstone focused on cloud infrastructure,
-                        deployment automation and observability.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>AWS</span>
-                        <span>Terraform</span>
-                        <span>DevOps</span>
-                    </div>
-
-                    <span class="project-link">Coming soon</span>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section class="section container" id="contact">
-            <div class="contact-card">
-                <p class="section-label">05 / CONTACT</p>
-
-                <h2>Let's build something <span>useful.</span></h2>
-
-                <p class="contact-description">
-                    I'm interested in DevOps opportunities, internships and
-                    collaborating on practical technical projects.
-                </p>
-
-                <div class="contact-buttons">
-
-                    <!-- GitHub icon only -->
-                    <a
-                        class="contact-icon github-icon"
-                        href="https://github.com/Rukeshkumar914"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub profile"
-                        title="GitHub"
-                    >
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                fill="currentColor"
-                                d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.51-1.3-1.24-1.65-1.24-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.29-2.61 5.23-5.1 5.51.4.35.75 1.03.75 2.08v3.1c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"
-                            />
-                        </svg>
-                    </a>
-
-                    <!-- Email icon only -->
-                    <a
-                        class="contact-icon"
-                        href="mailto:yrukesh787@gmail.com"
-                        aria-label="Send email"
-                        title="Email"
-                    >
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <rect
-                                x="3"
-                                y="5"
-                                width="18"
-                                height="14"
-                                rx="2"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.8"
-                            />
-                            <path
-                                d="m4 7 8 6 8-6"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.8"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                        </svg>
-                    </a>
-
-                    <!-- Phone icon only -->
-                    <a
-                        class="contact-icon"
-                        href="tel:+919142261069"
-                        aria-label="Call phone number"
-                        title="Phone"
-                    >
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.8"
-                            />
-                            <path
-                                d="M10 17.5h4"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.8"
-                                stroke-linecap="round"
-                            />
-                        </svg>
-                    </a>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>© 2026 Rukesh Kumar.</p>
-            <a href="#home">Back to top ↑</a>
+      <div class="about-card">
+        <p>
+          I'm focused on Python development, Linux administration,
+          containerization and DevOps automation. I enjoy learning
+          how applications are tested, packaged, deployed and maintained.
+          My goal is to build practical projects that solve real
+          engineering problems.
+        </p>
+      </div>
+    </section>
+    
+          </a>
         </div>
-    </footer>
+          <div class="hero-meta">
+            <span>📍 Punjab, India</span>
+            <span>🐧 Linux Enthusiast</span>
+            <span>⚙️ Cloud & Automation</span>
+         </div>
+      </div>
 
+    <!-- SKILLS -->
+    <section class="section container" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">02 / TECH STACK</p>
+        <h2>Tools I <span>work with.</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <span class="skill-icon">⌘</span>
+          <h3>Linux & Scripting</h3>
+          <p>
+            Ubuntu, Linux commands, Bash, Python automation
+            and networking fundamentals.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-icon">◇</span>
+          <h3>Containers</h3>
+          <p>
+            Docker, Docker Compose, container images
+            and container networking.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-icon">⌘</span>
+          <h3>Backend & Databases</h3>
+          <p>
+            Python, Django, Flask, PostgreSQL
+            and MySQL.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-icon">☁</span>
+          <h3>CI/CD & Cloud</h3>
+          <p>
+            Git, GitHub, GitHub Actions and AWS fundamentals.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-icon">⚙</span>
+          <h3>Testing & Tools</h3>
+          <p>
+            pytest, VS Code and Linux terminal.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GITHUB STATS -->
+    <section class="section container" id="github">
+      <div class="section-heading">
+        <p class="eyebrow">03 / OPEN SOURCE</p>
+        <h2>My GitHub <span>activity.</span></h2>
+        <p class="section-description">
+          Public repository statistics and language distribution
+          fetched from GitHub.
+        </p>
+      </div>
+
+      <div class="github-stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon">⌘</div>
+          <p class="stat-label">PUBLIC REPOSITORIES</p>
+          <h3 id="repo-count">—</h3>
+          <p class="stat-description">Public projects</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon">☆</div>
+          <p class="stat-label">TOTAL STARS</p>
+          <h3 id="star-count">—</h3>
+          <p class="stat-description">Stars received</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon">⑂</div>
+          <p class="stat-label">TOTAL FORKS</p>
+          <h3 id="fork-count">—</h3>
+          <p class="stat-description">Repository forks</p>
+        </article>
+      </div>
+
+      <!-- LANGUAGE STATISTICS -->
+      <article class="language-card">
+        <div class="card-heading">
+          <div>
+            <p class="eyebrow">CODE DISTRIBUTION</p>
+            <h3>Programming Languages</h3>
+          </div>
+
+          <span class="live-label">
+            <span class="status-dot"></span>
+            GitHub Data
+          </span>
+        </div>
+
+        <div
+          id="language-bar"
+          class="language-bar"
+          aria-label="Programming language distribution"
+        >
+          <span class="language-empty"></span>
+        </div>
+
+        <div id="language-legend" class="language-legend">
+          <p class="loading-text">Loading language statistics...</p>
+        </div>
+
+        <p id="stats-message" class="api-message" aria-live="polite">
+          Fetching public GitHub data...
+        </p>
+      </article>
+    </section>
+
+    <!-- FEATURED PROJECTS TABLE -->
+    <section class="section container" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">04 / SELECTED WORK</p>
+        <h2>Featured <span>Projects.</span></h2>
+        <p class="section-description">
+          Explore my public repositories, their primary languages,
+          stars, forks and latest updates.
+        </p>
+      </div>
+
+      <div class="projects-table-card">
+        <div class="table-toolbar">
+          <div>
+            <h3>Repository Overview</h3>
+            <p>Public repositories from my GitHub profile</p>
+          </div>
+
+          <a
+            class="button secondary"
+            href="https://github.com/Rukeshkumar914?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            All Repositories ↗
+          </a>
+        </div>
+
+        <div class="table-scroll">
+          <table class="projects-table">
+            <thead>
+              <tr>
+                <th>Repository</th>
+                <th>Description</th>
+                <th>Primary Language</th>
+                <th>Stars</th>
+                <th>Forks</th>
+                <th>Last Updated</th>
+              </tr>
+            </thead>
+
+            <tbody id="repositories-body">
+              <tr>
+                <td colspan="6" class="table-message">
+                  Loading public repositories...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-footer">
+          <span id="repository-count-label">
+            Loading repositories...
+          </span>
+
+          <a
+            href="https://github.com/Rukeshkumar914"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub Profile ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT CARDS -->
+      <div class="section-heading project-cards-heading">
+        <p class="eyebrow">PROJECT HIGHLIGHTS</p>
+        <h2>Built with <span>purpose.</span></h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">PROJECT 01 · IN DEVELOPMENT</span>
+            <span class="project-symbol">⌘</span>
+          </div>
+
+          <h3>CloudForge</h3>
+
+          <p>
+            A Python-based DevOps toolkit for system health checks,
+            CPU, memory and disk monitoring, JSON reports,
+            automated testing and command-line operations.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>CLI</span>
+            <span>JSON</span>
+            <span>pytest</span>
+          </div>
+
+          <a
+            class="project-link"
+            href="https://github.com/Rukeshkumar914/cloudforge"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Repository ↗
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">PROJECT 02 · IN PROGRESS</span>
+            <span class="project-symbol">↗</span>
+          </div>
+
+          <h3>DeployX</h3>
+
+          <p>
+            A planned deployment automation project focused on
+            Docker, GitHub Actions CI/CD, automated testing
+            and safer application releases.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>Docker</span>
+            <span>GitHub Actions</span>
+          </div>
+
+          <span class="project-link">In Progress</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">PROJECT 03 · IN PROGRESS</span>
+            <span class="project-symbol">⚙</span>
+          </div>
+
+          <h3>InfraPilot</h3>
+
+          <p>
+            A planned infrastructure automation toolkit for
+            Linux administration, Bash and Python scripting,
+            network diagnostics and database backup tasks.
+          </p>
+
+          <div class="tags">
+            <span>Linux</span>
+            <span>Bash</span>
+            <span>Python</span>
+            <span>PostgreSQL</span>
+          </div>
+
+          <span class="project-link">In Progress</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">PROJECT 04 · PLANNED</span>
+            <span class="project-symbol">◉</span>
+          </div>
+
+          <h3>OpsPilot</h3>
+
+          <p>
+            A planned server operations toolkit with resource
+            checks, log analysis, threshold-based alerts
+            and incident reports.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>Linux</span>
+            <span>Monitoring</span>
+            <span>Automation</span>
+          </div>
+
+          <span class="project-link">Planned</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">PROJECT 05 · PLANNED</span>
+            <span class="project-symbol">☁</span>
+          </div>
+
+          <h3>NimbusOps</h3>
+
+          <p>
+            A planned end-to-end DevOps project combining a
+            Python backend, PostgreSQL, Docker, CI/CD,
+            health checks and deployment history.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+            <span>CI/CD</span>
+          </div>
+
+          <span class="project-link">Planned</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section container" id="contact">
+      <div class="contact-card">
+        <p class="eyebrow">05 / CONTACT</p>
+        <h2>Let's build something <span>useful.</span></h2>
+
+        <p>
+          I'm interested in DevOps opportunities, internships
+          and collaborating on practical technical projects.
+        </p>
+
+        <div class="hero-buttons">
+          <a
+            class="button primary"
+            href="https://github.com/Rukeshkumar914"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Connect on GitHub ↗
+          </a>
+
+          <a
+            class="button secondary"
+            href="mailto:yrukesh787@gmail.com"
+          >
+            Email Me
+          </a>
+
+          <a
+            class="button third"
+            href="phone:~ 9142261069"
+            >
+            phone (+91)
+            </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© <span id="current-year"></span> Rukesh Kumar</p>
+    </div>
+  </footer>
+
+  <!-- GITHUB API INTEGRATION -->
+  <script>
+    const GITHUB_USERNAME = "Rukeshkumar914";
+    const GITHUB_API = "https://api.github.com";
+
+    const languageColors = {
+      Python: "#3572A5",
+      JavaScript: "#f1e05a",
+      TypeScript: "#3178c6",
+      HTML: "#e34c26",
+      CSS: "#563d7c",
+      Shell: "#89e051",
+      Bash: "#89e051",
+      Dockerfile: "#384d54",
+      Go: "#00ADD8",
+      Java: "#b07219",
+      C: "#555555",
+      "C++": "#f34b7d",
+      Ruby: "#701516",
+      PHP: "#4F5D95",
+      Rust: "#dea584",
+      Jupyter: "#DA5B0B",
+      Makefile: "#427819"
+    };
+
+    const defaultLanguageColors = [
+      "#67e8f9",
+      "#a78bfa",
+      "#4ade80",
+      "#fb7185",
+      "#fbbf24",
+      "#38bdf8",
+      "#f472b6",
+      "#c084fc"
+    ];
+
+    const numberFormat = new Intl.NumberFormat("en-US");
+
+    function element(id) {
+      return document.getElementById(id);
+    }
+
+    function safeText(value, fallback = "—") {
+      return typeof value === "string" && value.trim()
+        ? value.trim()
+        : fallback;
+    }
+
+    function getLanguageColor(language, index) {
+      return languageColors[language] ||
+        defaultLanguageColors[index % defaultLanguageColors.length];
+    }
+
+    function formatDate(dateString) {
+      const date = new Date(dateString);
+
+      if (Number.isNaN(date.getTime())) {
+        return "Unknown";
+      }
+
+      return date.toLocaleDateString("en-IN", {
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+      });
+    }
+
+    async function githubFetch(url) {
+      const response = await fetch(url, {
+        headers: {
+          Accept: "application/vnd.github+json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          `GitHub API returned ${response.status}`
+        );
+      }
+
+      return response.json();
+    }
+
+    async function loadGitHubPortfolio() {
+      const statsMessage = element("stats-message");
+      const repositoriesBody = element("repositories-body");
+
+      try {
+        const [profile, repositories] = await Promise.all([
+          githubFetch(
+            `${GITHUB_API}/users/${GITHUB_USERNAME}`
+          ),
+          githubFetch(
+            `${GITHUB_API}/users/${GITHUB_USERNAME}/repos?type=owner&sort=updated&per_page=100`
+          )
+        ]);
+
+        const publicRepositories = repositories.filter(
+          repository =>
+            !repository.private &&
+            !repository.fork &&
+            !repository.archived
+        );
+
+        const totalStars = publicRepositories.reduce(
+          (total, repository) =>
+            total + repository.stargazers_count,
+          0
+        );
+
+        const totalForks = publicRepositories.reduce(
+          (total, repository) =>
+            total + repository.forks_count,
+          0
+        );
+
+        element("repo-count").textContent =
+          numberFormat.format(profile.public_repos);
+
+        element("star-count").textContent =
+          numberFormat.format(totalStars);
+
+        element("fork-count").textContent =
+          numberFormat.format(totalForks);
+
+        element("repository-count-label").textContent =
+          `${publicRepositories.length} repositories displayed`;
+
+        renderRepositories(publicRepositories);
+
+        await loadLanguages(publicRepositories);
+
+        statsMessage.textContent =
+          "Statistics loaded from the GitHub public API.";
+
+      } catch (error) {
+        console.error("GitHub portfolio loading failed:", error);
+
+        statsMessage.textContent =
+          "GitHub data could not be loaded. Check your internet connection or try again later.";
+
+        repositoriesBody.innerHTML = `
+          <tr>
+            <td colspan="6" class="table-message">
+              Unable to load repositories.
+              <a
+                href="https://github.com/${GITHUB_USERNAME}?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View them on GitHub ↗</a>
+            </td>
+          </tr>
+        `;
+
+        element("language-legend").innerHTML = `
+          <p class="loading-text">
+            Language statistics are currently unavailable.
+          </p>
+        `;
+      }
+    }
+
+    function renderRepositories(repositories) {
+      const body = element("repositories-body");
+      body.replaceChildren();
+
+      if (!repositories.length) {
+        body.innerHTML = `
+          <tr>
+            <td colspan="6" class="table-message">
+              No public repositories found.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      repositories.forEach(repository => {
+        const row = document.createElement("tr");
+
+        const nameCell = document.createElement("td");
+        const link = document.createElement("a");
+
+        link.className = "repo-name";
+        link.href = repository.html_url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = repository.name;
+
+        nameCell.appendChild(link);
+
+        const descriptionCell = document.createElement("td");
+        descriptionCell.className = "repo-description";
+        descriptionCell.textContent = safeText(
+          repository.description,
+          "No description provided."
+        );
+
+        const languageCell = document.createElement("td");
+        languageCell.className = "language-cell";
+
+        if (repository.language) {
+          const dot = document.createElement("span");
+          dot.className = "language-dot";
+          dot.style.backgroundColor =
+            getLanguageColor(repository.language, 0);
+
+          languageCell.append(dot, document.createTextNode(
+            repository.language
+          ));
+        } else {
+          languageCell.textContent = "—";
+        }
+
+        const starsCell = document.createElement("td");
+        starsCell.textContent =
+          `☆ ${numberFormat.format(repository.stargazers_count)}`;
+
+        const forksCell = document.createElement("td");
+        forksCell.textContent =
+          `⑂ ${numberFormat.format(repository.forks_count)}`;
+
+        const updatedCell = document.createElement("td");
+        updatedCell.className = "updated-cell";
+        updatedCell.textContent =
+          formatDate(repository.updated_at);
+
+        [
+          nameCell,
+          descriptionCell,
+          languageCell,
+          starsCell,
+          forksCell,
+          updatedCell
+        ].forEach(cell => row.appendChild(cell));
+
+        body.appendChild(row);
+      });
+    }
+
+    async function loadLanguages(repositories) {
+      const languageTotals = {};
+
+      const results = await Promise.allSettled(
+        repositories.map(async repository => {
+          if (!repository.languages_url) {
+            return {};
+          }
+
+          return githubFetch(repository.languages_url);
+        })
+      );
+
+      results.forEach(result => {
+        if (result.status !== "fulfilled") {
+          return;
+        }
+
+        Object.entries(result.value).forEach(
+          ([language, bytes]) => {
+            languageTotals[language] =
+              (languageTotals[language] || 0) + bytes;
+          }
+        );
+      });
+
+      const languages = Object.entries(languageTotals)
+        .sort((a, b) => b[1] - a[1]);
+
+      const bar = element("language-bar");
+      const legend = element("language-legend");
+
+      bar.replaceChildren();
+      legend.replaceChildren();
+
+      const totalBytes = languages.reduce(
+        (total, [, bytes]) => total + bytes,
+        0
+      );
+
+      if (!totalBytes) {
+        legend.innerHTML = `
+          <p class="loading-text">
+            No language statistics are available yet.
+          </p>
+        `;
+        return;
+      }
+
+      // Display the five largest languages individually.
+      // Combine the remaining languages into "Other".
+      const visibleLanguages = languages.slice(0, 5);
+      const remainingLanguages = languages.slice(5);
+
+      if (remainingLanguages.length) {
+        const otherBytes = remainingLanguages.reduce(
+          (total, [, bytes]) => total + bytes,
+          0
+        );
+
+        visibleLanguages.push(["Other", otherBytes]);
+      }
+
+      const visibleTotal = visibleLanguages.reduce(
+        (total, [, bytes]) => total + bytes,
+        0
+      );
+
+      visibleLanguages.forEach(
+        ([language, bytes], index) => {
+          const percentage = bytes / visibleTotal * 100;
+          const color = language === "Other"
+            ? "#64748b"
+            : getLanguageColor(language, index);
+
+          const segment = document.createElement("span");
+          segment.className = "language-segment";
+          segment.style.width = `${percentage}%`;
+          segment.style.backgroundColor = color;
+          segment.title =
+            `${language}: ${percentage.toFixed(2)}%`;
+
+          bar.appendChild(segment);
+
+          const legendItem = document.createElement("div");
+          legendItem.className = "legend-item";
+
+          const label = document.createElement("div");
+          label.className = "legend-label";
+
+          const dot = document.createElement("span");
+          dot.className = "language-dot";
+          dot.style.backgroundColor = color;
+
+          const name = document.createElement("span");
+          name.textContent = language;
+
+          const value = document.createElement("strong");
+          value.textContent = `${percentage.toFixed(2)}%`;
+
+          label.append(dot, name);
+          legendItem.append(label, value);
+          legend.appendChild(legendItem);
+        }
+      );
+    }
+
+    element("current-year").textContent =
+      new Date().getFullYear();
+
+    loadGitHubPortfolio();
+  </script>
 </body>
 </html>
