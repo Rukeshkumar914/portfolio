@@ -203,6 +203,7 @@ input {
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start; 
   gap: 17px;
   margin-top: 30px;
   margin-left: 0;
