@@ -195,6 +195,7 @@ input {
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
+  justfiy-context: flex-end; 
   gap: 13px;
   margin-top: 30px;
 }
