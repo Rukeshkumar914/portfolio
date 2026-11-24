@@ -1,1028 +1,776 @@
-/* ========================================
-   1. ROOT & RESET
-======================================== */
-
-:root {
-  --bg: #0b1120;
-  --surface: #111c30;
-  --surface-light: #152238;
-  --border: #26344b;
-  --text: #e5edf8;
-  --muted: #9aaac0;
-  --accent: #67e8f9;
-  --white: #ffffff;
-  --green: #4ade80;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
-  line-height: 1.7;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-input {
-  font: inherit;
-}
-
-.container {
-  width: min(1100px, 90%);
-  margin: 0 auto;
-}
-
-/* ========================================
-   2. HEADER & NAVIGATION
-======================================== */
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(11, 17, 32, 0.94);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-}
-
-.navbar {
-  min-height: 76px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-}
-
-.logo {
-  flex-shrink: 0;
-  font-size: 1.4rem;
-  font-weight: 850;
-  letter-spacing: 1px;
-}
-
-.logo span,
-.hero h1 span,
-.section-heading h2 span,
-.contact-card h2 span {
-  color: var(--accent);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-
-.nav-links a,
-.resume-link {
-  color: var(--muted);
-  font-size: 0.86rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover,
-.resume-link:hover {
-  color: var(--accent);
-}
-
-.nav-cta {
-  white-space: nowrap;
-}
-
-/* ========================================
-   3. BUTTONS
-======================================== */
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 11px 17px;
-  border: 1px solid var(--border);
-  border-radius: 7px;
-  font-size: 0.88rem;
-  font-weight: 650;
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
-.primary {
-  background: var(--accent);
-  color: #07111f;
-  border-color: var(--accent);
-}
-
-.primary:hover {
-  background: #a5f3fc;
-}
-
-.secondary {
-  background: transparent;
-}
-
-.secondary:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-/* ========================================
-   4. HERO SECTION
-======================================== */
-
-.hero {
-  min-height: 600px;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  align-items: center;
-  gap: 50px;
-  padding: 75px 0;
-}
-
-.eyebrow {
-  margin-bottom: 18px;
-  color: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 750;
-  letter-spacing: 2px;
-}
-
-.status-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 8px;
-  border-radius: 50%;
-  background: var(--green);
-}
-
-.hero h1 {
-  margin-bottom: 24px;
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-  line-height: 1.13;
-  letter-spacing: -1.8px;
-}
-
-.hero-description {
-  max-width: 560px;
-  color: var(--muted);
-  font-size: 1rem;
-}
-
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justfiy-context: flex-end; 
-  gap: 13px;
-  margin-top: 30px;
-}
-
-.hero-meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; 
-  gap: 17px;
-  margin-top: 30px;
-  margin-left: 0;
-  padding-left: 0; 
-  color: var(--muted);
-  font-size: 0.78rem;
-  width: 100%;
-}
-
-/* ========================================
-   5. TERMINAL
-======================================== */
-
-.terminal {
-  min-width: 0;
-  overflow: hidden;
-  border: 1px solid #30415c;
-  border-radius: 12px;
-  background: #080e19;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.22);
-}
-
-.terminal-header {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  padding: 13px 17px;
-  border-bottom: 1px solid var(--border);
-  background: #131e31;
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-
-.terminal-dots {
-  display: flex;
-  gap: 6px;
-}
-
-.terminal-dots span {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #64748b;
-}
-
-.terminal-dots span:first-child {
-  background: #fb7185;
-}
-
-.terminal-dots span:nth-child(2) {
-  background: #fbbf24;
-}
-
-.terminal-dots span:nth-child(3) {
-  background: var(--green);
-}
-
-.terminal-body {
-  min-height: 260px;
-  padding: 27px 23px;
-  overflow-wrap: anywhere;
-  font-family: "SFMono-Regular", Consolas, monospace;
-  font-size: 0.82rem;
-}
-
-.terminal-body p {
-  margin-bottom: 9px;
-}
-
-.green {
-  color: var(--green);
-}
-
-.output {
-  padding-left: 17px;
-  color: #9db0ca;
-}
-
-.cursor {
-  color: var(--accent);
-}
-
-/* ========================================
-   6. GENERAL SECTIONS
-======================================== */
-
-.section {
-  padding: 75px 0;
-}
-
-.section-heading {
-  max-width: 700px;
-  margin-bottom: 32px;
-}
-
-.section-heading h2,
-.contact-card h2 {
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  line-height: 1.25;
-  letter-spacing: -0.7px;
-}
-
-.section-description {
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-/* ========================================
-   7. ABOUT
-======================================== */
-
-.about-card {
-  max-width: 850px;
-  padding: 30px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--surface);
-  color: var(--muted);
-}
-
-.about-card p + p {
-  margin-top: 16px;
-}
-
-/* ========================================
-   8. SKILLS
-======================================== */
-
-.skills-grid,
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.skill-card,
-.project-card {
-  min-width: 0;
-  padding: 24px;
-  border: 1px solid var(--border);
-  border-radius: 11px;
-  background: var(--surface);
-  transition:
-    border-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.skill-card:hover,
-.project-card:hover {
-  border-color: #4c829b;
-  transform: translateY(-3px);
-}
-
-.skill-icon,
-.project-symbol {
-  color: var(--accent);
-  font-size: 1.7rem;
-}
-
-.skill-card h3,
-.project-card h3 {
-  margin-top: 14px;
-  margin-bottom: 9px;
-  font-size: 1.1rem;
-}
-
-.skill-card p,
-.project-card p,
-.contact-card > p:not(.eyebrow) {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-/* ========================================
-   9. GITHUB STATS
-======================================== */
-
-.github-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-bottom: 20px;
-}
-
-.stat-card {
-  min-width: 0;
-  padding: 24px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(103, 232, 249, 0.07),
-      transparent 60%
-    ),
-    var(--surface);
-  transition: border-color 0.2s ease;
-}
-
-.stat-card:hover {
-  border-color: #4c829b;
-}
-
-.stat-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  margin-bottom: 18px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: #0c1729;
-  color: var(--accent);
-  font-size: 1.4rem;
-}
-
-.stat-label {
-  color: var(--muted);
-  font-size: 0.69rem;
-  font-weight: 700;
-  letter-spacing: 1.1px;
-}
-
-.stat-card h3 {
-  margin: 7px 0 3px;
-  font-size: 2rem;
-  line-height: 1.3;
-  overflow-wrap: anywhere;
-}
-
-.stat-description {
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-
-/* ========================================
-   10. LANGUAGE DISTRIBUTION
-======================================== */
-
-.language-card {
-  padding: 28px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--surface);
-}
-
-.card-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 24px;
-}
-
-.card-heading .eyebrow {
-  margin-bottom: 5px;
-}
-
-.card-heading h3 {
-  font-size: 1.25rem;
-}
-
-.live-label {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 10px;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  color: var(--muted);
-  font-size: 0.73rem;
-  white-space: nowrap;
-}
-
-.live-label .status-dot {
-  width: 7px;
-  height: 7px;
-}
-
-.language-bar {
-  display: flex;
-  width: 100%;
-  height: 13px;
-  overflow: hidden;
-  border-radius: 20px;
-  background: #202c40;
-}
-
-.language-segment {
-  display: block;
-  height: 100%;
-  min-width: 2px;
-  transition: width 0.4s ease;
-}
-
-.language-legend {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 17px 30px;
-  margin-top: 25px;
-}
-
-.legend-item,
-.legend-label {
-  display: flex;
-  align-items: center;
-}
-
-.legend-item {
-  justify-content: space-between;
-  gap: 10px;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-.legend-label {
-  min-width: 0;
-  gap: 9px;
-}
-
-.legend-label > span:last-child {
-  overflow-wrap: anywhere;
-}
-
-.legend-item strong {
-  flex-shrink: 0;
-  color: var(--text);
-  font-size: 0.83rem;
-}
-
-.language-dot {
-  display: inline-block;
-  flex-shrink: 0;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-}
-
-.loading-text,
-.api-message {
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
-.api-message {
-  margin-top: 24px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-}
-
-/* ========================================
-   11. FEATURED PROJECTS TABLE
-======================================== */
-
-.projects-table-card {
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--surface);
-}
-
-.table-toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 24px;
-  border-bottom: 1px solid var(--border);
-}
-
-.table-toolbar h3 {
-  margin-bottom: 4px;
-  font-size: 1.05rem;
-}
-
-.table-toolbar p {
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-.table-scroll {
-  width: 100%;
-  overflow-x: auto;
-  scrollbar-color: #344760 #111c30;
-  scrollbar-width: thin;
-}
-
-.projects-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  font-size: 0.82rem;
-}
-
-.projects-table th,
-.projects-table td {
-  padding: 18px 16px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: middle;
-}
-
-.projects-table th {
-  background: #0d1728;
-  color: #c9d7e9;
-  font-size: 0.74rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.projects-table tbody tr {
-  transition: background 0.2s ease;
-}
-
-.projects-table tbody tr:hover {
-  background: var(--surface-light);
-}
-
-.projects-table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.projects-table td:first-child,
-.projects-table th:first-child {
-  padding-left: 24px;
-}
-
-.repo-name {
-  color: var(--accent);
-  font-weight: 700;
-  overflow-wrap: anywhere;
-}
-
-.repo-name:hover {
-  text-decoration: underline;
-}
-
-.repo-description {
-  min-width: 220px;
-  max-width: 340px;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.language-cell {
-  min-width: 130px;
-  white-space: nowrap;
-}
-
-.language-cell .language-dot {
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
-.updated-cell {
-  min-width: 115px;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-.table-message {
-  padding: 35px 20px !important;
-  color: var(--muted);
-  text-align: center;
-}
-
-.table-message a {
-  color: var(--accent);
-}
-
-.table-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 17px 24px;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.77rem;
-}
-
-.table-footer a {
-  color: var(--accent);
-  font-weight: 650;
-}
-
-.table-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ========================================
-   12. PROJECT CARDS
-======================================== */
-
-.project-cards-heading {
-  margin-top: 75px;
-}
-
-.project-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
-
-.project-number {
-  color: var(--muted);
-  font-size: 0.68rem;
-  letter-spacing: 0.8px;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.project-card > p {
-  margin-bottom: 20px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 24px;
-}
-
-.tags span {
-  padding: 4px 9px;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  color: #c0d0e5;
-  font-size: 0.72rem;
-}
-
-.project-link {
-  margin-top: auto;
-  color: var(--accent);
-  font-size: 0.85rem;
-  font-weight: 650;
-}
-
-.project-link:hover {
-  text-decoration: underline;
-}
-
-/* ========================================
-   13. CONTACT
-======================================== */
-
-.contact-card {
-  padding: 45px;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background:
-    radial-gradient(
-      ellipse at top right,
-      #173047 0%,
-      transparent 60%
-    ),
-    var(--surface);
-}
-
-.contact-card > p:not(.eyebrow) {
-  max-width: 600px;
-  margin-top: 16px;
-}
-
-/* ========================================
-   14. FOOTER
-======================================== */
-
-.footer {
-  border-top: 1px solid var(--border);
-}
-
-.footer-content {
-  min-height: 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-}
-
-.footer-content p {
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-
-/* ========================================
-   15. TABLET RESPONSIVE
-======================================== */
-
-@media (max-width: 1000px) {
-  .navbar {
-    gap: 16px;
-  }
-
-  .nav-links {
-    gap: 14px;
-  }
-
-  .nav-links a {
-    font-size: 0.8rem;
-  }
-
-  .hero {
-    gap: 35px;
-  }
-
-  .projects-table {
-    min-width: 900px;
-  }
-}
-
-@media (max-width: 850px) {
-  .navbar {
-    flex-wrap: wrap;
-    padding: 15px 0;
-  }
-
-  .nav-links {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-
-  .hero {
-    min-height: auto;
-    grid-template-columns: 1fr;
-    gap: 38px;
-  }
-
-  .terminal {
-    width: 100%;
-    max-width: 600px;
-  }
-
-  .skills-grid,
-  .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .github-stats-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .stat-card {
-    padding: 18px;
-  }
-
-  .stat-card h3 {
-    font-size: 1.7rem;
-  }
-}
-
-/* ========================================
-   16. MOBILE RESPONSIVE
-======================================== */
-
-@media (max-width: 600px) {
-  .container {
-    width: min(100% - 32px, 1100px);
-  }
-
-  .navbar {
-    min-height: 70px;
-    gap: 14px;
-  }
-
-  .logo {
-    font-size: 1.25rem;
-  }
-
-  .nav-cta {
-    padding: 8px 11px;
-    font-size: 0.75rem;
-  }
-
-  .nav-links {
-    justify-content: flex-start;
-    gap: 12px 18px;
-  }
-
-  .nav-links a {
-    font-size: 0.8rem;
-  }
-
-  .hero {
-    padding: 55px 0 45px;
-  }
-
-  .hero h1 {
-    font-size: 2.45rem;
-    letter-spacing: -1px;
-  }
-
-  .hero-description {
-    font-size: 0.92rem;
-  }
-
-  .hero-meta {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .section {
-    padding: 50px 0;
-  }
-
-  .section-heading h2,
-  .contact-card h2 {
-    font-size: 1.9rem;
-  }
-
-  .skills-grid,
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .skill-card,
-  .project-card {
-    padding: 22px;
-  }
-
-  .github-stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stat-card {
-    display: grid;
-    grid-template-columns: 45px 1fr;
-    column-gap: 14px;
-    align-items: center;
-    padding: 18px;
-  }
-
-  .stat-icon {
-    grid-row: 1 / span 3;
-    margin-bottom: 0;
-  }
-
-  .stat-label {
-    align-self: end;
-  }
-
-  .stat-card h3 {
-    margin: 0;
-    font-size: 1.6rem;
-  }
-
-  .language-card {
-    padding: 20px;
-  }
-
-  .card-heading {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .language-legend {
-    grid-template-columns: 1fr;
-    gap: 13px;
-  }
-
-  .table-toolbar {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .table-footer {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 17px 20px;
-  }
-
-  .projects-table {
-    min-width: 850px;
-  }
-
-  .project-cards-heading {
-    margin-top: 50px;
-  }
-
-  .about-card,
-  .contact-card {
-    padding: 24px;
-  }
-
-  .footer-content {
-    min-height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 22px 0;
-  }
-}
-
-/* ========================================
-   17. ACCESSIBILITY
-======================================== */
-
-a:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition: none !important;
-    animation: none !important;
-  }
-}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rukesh Kumar's DevOps Engineer and Python Developer portfolio.">
+  <meta name="theme-color" content="#0b1120">
+
+  <title>Rukesh Kumar | DevOps Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <header class="header">
+    <nav class="navbar container">
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#github">GitHub</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="resume-link" href="assets/resume.pdf" download>
+          Resume ↓
+        </a>
+      </div>
+
+      <a class="button primary nav-cta" href="#projects">
+        Explore Work ↗
+      </a>
+    </nav>
+  </header>
+
+  <main>
+     <!-- ABOUT -->
+    <section class="section container" id="about">
+      <div class="section-heading">
+        <h2> Rukesh <span> Kumar </span></h2>
+      </div>
+
+      <div class="about-card">
+        <p>
+          I'm focused on Python development, Linux administration,
+          containerization and DevOps automation. I enjoy learning
+          how applications are tested, packaged, deployed and maintained.
+          My goal is to build practical projects that solve real
+          engineering problems.
+        </p>
+      </div>
+    </section>
+          </a>
+        </div>
+          <div class="hero-meta">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+      </div>
+
+    <!-- SKILLS -->
+    <section class="section container" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">02 / TECH STACK</p>
+        <h2>Tools I <span>work with.</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <span class="skill-icon">⌘</span>
+          <h3>Linux & Scripting</h3>
+          <p>
+            Ubuntu, Linux commands, Bash, Python automation
+            and networking fundamentals.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-icon">◇</span>
+          <h3>Containers</h3>
+          <p>
+            Docker, Docker Compose, container images
+            and container networking.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-icon">⌘</span>
+          <h3>Backend & Databases</h3>
+          <p>
+            Python, Django, Flask, PostgreSQL
+            and MySQL.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-icon">☁</span>
+          <h3>CI/CD & Cloud</h3>
+          <p>
+            Git, GitHub, GitHub Actions and AWS fundamentals.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-icon">⚙</span>
+          <h3>Testing & Tools</h3>
+          <p>
+            pytest, VS Code and Linux terminal.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GITHUB STATS -->
+    <section class="section container" id="github">
+      <div class="section-heading">
+        <p class="eyebrow">03 / OPEN SOURCE</p>
+        <h2>My GitHub <span>activity.</span></h2>
+        <p class="section-description">
+          Public repository statistics and language distribution
+          fetched from GitHub.
+        </p>
+      </div>
+
+      <div class="github-stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon">⌘</div>
+          <p class="stat-label">PUBLIC REPOSITORIES</p>
+          <h3 id="repo-count">—</h3>
+          <p class="stat-description">Public projects</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon">☆</div>
+          <p class="stat-label">TOTAL STARS</p>
+          <h3 id="star-count">—</h3>
+          <p class="stat-description">Stars received</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon">⑂</div>
+          <p class="stat-label">TOTAL FORKS</p>
+          <h3 id="fork-count">—</h3>
+          <p class="stat-description">Repository forks</p>
+        </article>
+      </div>
+
+      <!-- LANGUAGE STATISTICS -->
+      <article class="language-card">
+        <div class="card-heading">
+          <div>
+            <p class="eyebrow">CODE DISTRIBUTION</p>
+            <h3>Programming Languages</h3>
+          </div>
+
+          <span class="live-label">
+            <span class="status-dot"></span>
+            GitHub Data
+          </span>
+        </div>
+
+        <div
+          id="language-bar"
+          class="language-bar"
+          aria-label="Programming language distribution"
+        >
+          <span class="language-empty"></span>
+        </div>
+
+        <div id="language-legend" class="language-legend">
+          <p class="loading-text">Loading language statistics...</p>
+        </div>
+
+        <p id="stats-message" class="api-message" aria-live="polite">
+          Fetching public GitHub data...
+        </p>
+      </article>
+    </section>
+
+    <!-- FEATURED PROJECTS TABLE -->
+    <section class="section container" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">04 / SELECTED WORK</p>
+        <h2>Featured <span>Projects.</span></h2>
+        <p class="section-description">
+          Explore my public repositories, their primary languages,
+          stars, forks and latest updates.
+        </p>
+      </div>
+
+      <div class="projects-table-card">
+        <div class="table-toolbar">
+          <div>
+            <h3>Repository Overview</h3>
+            <p>Public repositories from my GitHub profile</p>
+          </div>
+
+          <a
+            class="button secondary"
+            href="https://github.com/Rukeshkumar914?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            All Repositories ↗
+          </a>
+        </div>
+
+        <div class="table-scroll">
+          <table class="projects-table">
+            <thead>
+              <tr>
+                <th>Repository</th>
+                <th>Description</th>
+                <th>Primary Language</th>
+                <th>Stars</th>
+                <th>Forks</th>
+                <th>Last Updated</th>
+              </tr>
+            </thead>
+
+            <tbody id="repositories-body">
+              <tr>
+                <td colspan="6" class="table-message">
+                  Loading public repositories...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-footer">
+          <span id="repository-count-label">
+            Loading repositories...
+          </span>
+
+          <a
+            href="https://github.com/Rukeshkumar914"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub Profile ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT CARDS -->
+      <div class="section-heading project-cards-heading">
+        <p class="eyebrow">PROJECT HIGHLIGHTS</p>
+        <h2>Built with <span>purpose.</span></h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">PROJECT 01 · COMPLETED </span>
+            <span class="project-symbol">⌘</span>
+          </div>
+
+          <h3>CloudForge</h3>
+
+          <p>
+            A Python-based DevOps toolkit for system health checks,
+            CPU, memory and disk monitoring, JSON reports,
+            automated testing and command-line operations.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>CLI</span>
+            <span>JSON</span>
+            <span>pytest</span>
+          </div>
+
+          <a
+            class="project-link"
+            href="https://github.com/Rukeshkumar914/cloudforge"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Repository ↗
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">PROJECT 02 · COMPLETED </span>
+            <span class="project-symbol">↗</span>
+          </div>
+
+          <h3>DeployX</h3>
+
+          <p>
+            A planned deployment automation project focused on
+            Docker, GitHub Actions CI/CD, automated testing
+            and safer application releases.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>Docker</span>
+            <span>GitHub Actions</span>
+          </div>
+
+          <a
+            class="project-link"
+                href="https://github.com/Rukeshkumar914/deployx"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Repository ↗
+          </a>
+            
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">PROJECT 03 · COMPLETED </span>
+            <span class="project-symbol">⚙</span>
+          </div>
+
+          <h3>InfraPilot</h3>
+
+          <p>
+            A planned infrastructure automation toolkit for
+            Linux administration, Bash and Python scripting,
+            network diagnostics and database backup tasks.
+          </p>
+
+          <div class="tags">
+            <span>Linux</span>
+            <span>Bash</span>
+            <span>Python</span>
+            <span>PostgreSQL</span>
+          </div>
+
+          <a
+            class="project-link"
+                href="https://github.com/Rukeshkumar914/infrapilot"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Repository ↗
+          </a>
+              
+          
+        </article>
+
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">PROJECT 04 · In Progress</span>
+            <span class="project-symbol">☁</span>
+          </div>
+
+          <h3>NimbusOps</h3>
+
+          <p>
+            A planned end-to-end DevOps project combining a
+            Python backend, PostgreSQL, Docker, CI/CD,
+            health checks and deployment history.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+            <span>CI/CD</span>
+          </div>
+
+          <span class="project-link"> In Progress </span>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section container" id="contact">
+      <div class="contact-card">
+        <p class="eyebrow">05 / CONTACT</p>
+        <h2>Let's build something <span>useful.</span></h2>
+
+        <p>
+          I'm interested in DevOps opportunities, internships
+          and collaborating on practical technical projects.
+        </p>
+
+        <div class="hero-buttons">
+          <a
+            class="button primary"
+            href="https://github.com/Rukeshkumar914"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Connect on GitHub ↗
+          </a>
+
+          <a
+            class="button secondary"
+            href="mailto:yrukesh787@gmail.com"
+          >
+            Email Me
+          </a>
+
+          <a
+            class="button third"
+            href="phone:~ 9142261069"
+            >
+            phone (+91)
+            </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© <span id="current-year"></span> Rukesh Kumar</p>
+    </div>
+  </footer>
+
+  <!-- GITHUB API INTEGRATION -->
+  <script>
+    const GITHUB_USERNAME = "Rukeshkumar914";
+    const GITHUB_API = "https://api.github.com";
+
+    const languageColors = {
+      Python: "#3572A5",
+      JavaScript: "#f1e05a",
+      TypeScript: "#3178c6",
+      HTML: "#e34c26",
+      CSS: "#563d7c",
+      Shell: "#89e051",
+      Bash: "#89e051",
+      Dockerfile: "#384d54",
+      Go: "#00ADD8",
+      Java: "#b07219",
+      C: "#555555",
+      "C++": "#f34b7d",
+      Ruby: "#701516",
+      PHP: "#4F5D95",
+      Rust: "#dea584",
+      Jupyter: "#DA5B0B",
+      Makefile: "#427819"
+    };
+
+    const defaultLanguageColors = [
+      "#67e8f9",
+      "#a78bfa",
+      "#4ade80",
+      "#fb7185",
+      "#fbbf24",
+      "#38bdf8",
+      "#f472b6",
+      "#c084fc"
+    ];
+
+    const numberFormat = new Intl.NumberFormat("en-US");
+
+    function element(id) {
+      return document.getElementById(id);
+    }
+
+    function safeText(value, fallback = "—") {
+      return typeof value === "string" && value.trim()
+        ? value.trim()
+        : fallback;
+    }
+
+    function getLanguageColor(language, index) {
+      return languageColors[language] ||
+        defaultLanguageColors[index % defaultLanguageColors.length];
+    }
+
+    function formatDate(dateString) {
+      const date = new Date(dateString);
+
+      if (Number.isNaN(date.getTime())) {
+        return "Unknown";
+      }
+
+      return date.toLocaleDateString("en-IN", {
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+      });
+    }
+
+    async function githubFetch(url) {
+      const response = await fetch(url, {
+        headers: {
+          Accept: "application/vnd.github+json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          `GitHub API returned ${response.status}`
+        );
+      }
+
+      return response.json();
+    }
+
+    async function loadGitHubPortfolio() {
+      const statsMessage = element("stats-message");
+      const repositoriesBody = element("repositories-body");
+
+      try {
+        const [profile, repositories] = await Promise.all([
+          githubFetch(
+            `${GITHUB_API}/users/${GITHUB_USERNAME}`
+          ),
+          githubFetch(
+            `${GITHUB_API}/users/${GITHUB_USERNAME}/repos?type=owner&sort=updated&per_page=100`
+          )
+        ]);
+
+        const publicRepositories = repositories.filter(
+          repository =>
+            !repository.private &&
+            !repository.fork &&
+            !repository.archived
+        );
+
+        const totalStars = publicRepositories.reduce(
+          (total, repository) =>
+            total + repository.stargazers_count,
+          0
+        );
+
+        const totalForks = publicRepositories.reduce(
+          (total, repository) =>
+            total + repository.forks_count,
+          0
+        );
+
+        element("repo-count").textContent =
+          numberFormat.format(profile.public_repos);
+
+        element("star-count").textContent =
+          numberFormat.format(totalStars);
+
+        element("fork-count").textContent =
+          numberFormat.format(totalForks);
+
+        element("repository-count-label").textContent =
+          `${publicRepositories.length} repositories displayed`;
+
+        renderRepositories(publicRepositories);
+
+        await loadLanguages(publicRepositories);
+
+        statsMessage.textContent =
+          "Statistics loaded from the GitHub public API.";
+
+      } catch (error) {
+        console.error("GitHub portfolio loading failed:", error);
+
+        statsMessage.textContent =
+          "GitHub data could not be loaded. Check your internet connection or try again later.";
+
+        repositoriesBody.innerHTML = `
+          <tr>
+            <td colspan="6" class="table-message">
+              Unable to load repositories.
+              <a
+                href="https://github.com/${GITHUB_USERNAME}?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View them on GitHub ↗</a>
+            </td>
+          </tr>
+        `;
+
+        element("language-legend").innerHTML = `
+          <p class="loading-text">
+            Language statistics are currently unavailable.
+          </p>
+        `;
+      }
+    }
+
+    function renderRepositories(repositories) {
+      const body = element("repositories-body");
+      body.replaceChildren();
+
+      if (!repositories.length) {
+        body.innerHTML = `
+          <tr>
+            <td colspan="6" class="table-message">
+              No public repositories found.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      repositories.forEach(repository => {
+        const row = document.createElement("tr");
+
+        const nameCell = document.createElement("td");
+        const link = document.createElement("a");
+
+        link.className = "repo-name";
+        link.href = repository.html_url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = repository.name;
+
+        nameCell.appendChild(link);
+
+        const descriptionCell = document.createElement("td");
+        descriptionCell.className = "repo-description";
+        descriptionCell.textContent = safeText(
+          repository.description,
+          "No description provided."
+        );
+
+        const languageCell = document.createElement("td");
+        languageCell.className = "language-cell";
+
+        if (repository.language) {
+          const dot = document.createElement("span");
+          dot.className = "language-dot";
+          dot.style.backgroundColor =
+            getLanguageColor(repository.language, 0);
+
+          languageCell.append(dot, document.createTextNode(
+            repository.language
+          ));
+        } else {
+          languageCell.textContent = "—";
+        }
+
+        const starsCell = document.createElement("td");
+        starsCell.textContent =
+          `☆ ${numberFormat.format(repository.stargazers_count)}`;
+
+        const forksCell = document.createElement("td");
+        forksCell.textContent =
+          `⑂ ${numberFormat.format(repository.forks_count)}`;
+
+        const updatedCell = document.createElement("td");
+        updatedCell.className = "updated-cell";
+        updatedCell.textContent =
+          formatDate(repository.updated_at);
+
+        [
+          nameCell,
+          descriptionCell,
+          languageCell,
+          starsCell,
+          forksCell,
+          updatedCell
+        ].forEach(cell => row.appendChild(cell));
+
+        body.appendChild(row);
+      });
+    }
+
+    async function loadLanguages(repositories) {
+      const languageTotals = {};
+
+      const results = await Promise.allSettled(
+        repositories.map(async repository => {
+          if (!repository.languages_url) {
+            return {};
+          }
+
+          return githubFetch(repository.languages_url);
+        })
+      );
+
+      results.forEach(result => {
+        if (result.status !== "fulfilled") {
+          return;
+        }
+
+        Object.entries(result.value).forEach(
+          ([language, bytes]) => {
+            languageTotals[language] =
+              (languageTotals[language] || 0) + bytes;
+          }
+        );
+      });
+
+      const languages = Object.entries(languageTotals)
+        .sort((a, b) => b[1] - a[1]);
+
+      const bar = element("language-bar");
+      const legend = element("language-legend");
+
+      bar.replaceChildren();
+      legend.replaceChildren();
+
+      const totalBytes = languages.reduce(
+        (total, [, bytes]) => total + bytes,
+        0
+      );
+
+      if (!totalBytes) {
+        legend.innerHTML = `
+          <p class="loading-text">
+            No language statistics are available yet.
+          </p>
+        `;
+        return;
+      }
+
+      // Display the five largest languages individually.
+      // Combine the remaining languages into "Other".
+      const visibleLanguages = languages.slice(0, 5);
+      const remainingLanguages = languages.slice(5);
+
+      if (remainingLanguages.length) {
+        const otherBytes = remainingLanguages.reduce(
+          (total, [, bytes]) => total + bytes,
+          0
+        );
+
+        visibleLanguages.push(["Other", otherBytes]);
+      }
+
+      const visibleTotal = visibleLanguages.reduce(
+        (total, [, bytes]) => total + bytes,
+        0
+      );
+
+      visibleLanguages.forEach(
+        ([language, bytes], index) => {
+          const percentage = bytes / visibleTotal * 100;
+          const color = language === "Other"
+            ? "#64748b"
+            : getLanguageColor(language, index);
+
+          const segment = document.createElement("span");
+          segment.className = "language-segment";
+          segment.style.width = `${percentage}%`;
+          segment.style.backgroundColor = color;
+          segment.title =
+            `${language}: ${percentage.toFixed(2)}%`;
+
+          bar.appendChild(segment);
+
+          const legendItem = document.createElement("div");
+          legendItem.className = "legend-item";
+
+          const label = document.createElement("div");
+          label.className = "legend-label";
+
+          const dot = document.createElement("span");
+          dot.className = "language-dot";
+          dot.style.backgroundColor = color;
+
+          const name = document.createElement("span");
+          name.textContent = language;
+
+          const value = document.createElement("strong");
+          value.textContent = `${percentage.toFixed(2)}%`;
+
+          label.append(dot, name);
+          legendItem.append(label, value);
+          legend.appendChild(legendItem);
+        }
+      );
+    }
+
+    element("current-year").textContent =
+      new Date().getFullYear();
+
+    loadGitHubPortfolio();
+  </script>
+</body>
+</html>
